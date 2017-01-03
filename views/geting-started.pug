@@ -1,0 +1,39 @@
+extends template/base.pug
+
+block content
+    .primary.z-depth-1
+        .container
+            .wrapper
+                h4 Getting started
+                p How to download and use the Materius framework.
+    .container
+        .wrapper
+            h5 Download
+            p Materius is available in two different forms. To start using Materius, all you have to do is download one of the options below.
+            .row
+                .col-xs-12.col-md-6
+                    .wrapper
+                        h5 Materius
+                        p This is the stardard version. That comes with the minified and unminifed CSS and Javascript files. Use this if you are unfamiliar with Stylus, or css processators.
+                        a.btn.secondary(href='#')
+                            span Materius
+                            =' '
+                            i.mdi.mdi-download
+                .col-xs-12.col-md-6
+                    .wrapper
+                        h5 Stylus
+                        p This version contans the sources STYL's files. Choosing this option yu have more control over wich component. You will need a stylus compiler, or use the gulp file, included on this option.
+                        a.btn.secondary(href='#')
+                            span Source
+                            =' '
+                            i.mdi.mdi-download
+            .section
+                h5 NPM
+                p You can get the lastest release using NPM. This release contais source files and te compiled CSS and Javascript files.
+                .bash
+                    p npm install materius
+            .section
+                h5 Bower
+                p You can get the lastest release using Bower. This release contais source files and te compiled CSS and Javascript files.
+                .bash
+                    p bower install materius
