@@ -1,0 +1,24 @@
+.input-box
+    display inline-block
+    height $input-box-height
+    line-height $input-box-height
+    border-radius $input-box-radius
+    background $input-box-background
+    padding $input-box-padding
+    margin $input-box-margin
+    @extend .z-depth-1, .hoverable, .row
+    input,
+    button
+        border none
+        background transparent
+        outline none
+    input
+        @extend .col-xs
+    button
+        color #666
+        font-size 18px
+        cursor pointer !important
+        transition color .25s
+        &:hover
+            color #333
+            transition color .25s

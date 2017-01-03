@@ -1,0 +1,48 @@
+{
+  "name": "material-admin",
+  "version": "0.1.0",
+  "description": "Sass, Webpack, Gulp, Pugjs Boilerplate",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juliano Bailão - julianobailao@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "blueimp-file-upload": "^9.12.5",
+    "browser-sync": "^2.15.0",
+    "cropper": "^2.3.4",
+    "datatables": "^1.10.12",
+    "dropzone": "^4.3.0",
+    "flexboxgrid": "^6.3.1",
+    "fullcalendar": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-pug": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webpack": "^1.5.0",
+    "hammerjs": "^2.0.8",
+    "install": "^0.8.2",
+    "jquery": "^3.1.1",
+    "jquery-mask-plugin": "^1.14.0",
+    "jquery-ui": "^1.12.1",
+    "mdi": "^1.7.22",
+    "npm": "^4.0.3",
+    "photoswipe": "^4.1.1",
+    "prismjs": "^1.5.1",
+    "require-dir": "^0.3.0",
+    "select2": "^4.0.3",
+    "slick-carousel": "^1.6.0",
+    "sweetalert2": "^5.3.8"
+  },
+  "dependencies": {
+    "mdi": "^1.7.22"
+  }
+}

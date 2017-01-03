@@ -1,0 +1,53 @@
+//colors
+$primary-color = $light-blue['base']
+$success-color = $green['base']
+$info-color = $cyan['base']
+$warning-color = $amber['base']
+$danger-color = $red['base']
+
+// button
+$button-background = $primary-color
+$button-font-size = 1rem
+$button-height = 36px
+$button-padding = 0 2rem
+$button-radius = 2px
+
+// navbar
+$navbar-background = $primary-color
+$navbar-height = 64px
+$navbar-height-mobile = $navbar-height
+$navbar-font-size = 1rem
+$navbar-brand-font-size = 1.2rem
+$navbar-icon-font-size = 1.5rem
+
+// input-box
+$input-box-height = $button-height
+$input-box-radius = $button-radius
+$input-box-background = #FFFFFF
+$input-box-padding = 0 5px 0 0
+$input-box-margin = 0 10px 0 0
+
+// footer
+$footer-background = $blue-grey['darken-3']
+
+// media Query ranges
+$small-screen-up = 601px;
+$medium-screen-up = 993px;
+$large-screen-up = 1201px;
+$small-screen = 600px;
+$medium-screen = 992px;
+$large-screen = 1200px;
+
+// Header Styles
+$h1-font-size = 4.2rem;
+$h2-font-size = 3.56rem;
+$h3-font-size = 2.92rem;
+$h4-font-size = 2.28rem;
+$h5-font-size = 1.64rem;
+$h6-font-size = 1rem;
+
+colorByBackground($background)
+    if lightness($background) <= 60deg
+        color rgba(255, 255, 255, .9)
+    else
+        color rgba(0, 0, 0, .6)

@@ -1,0 +1,33 @@
+.navbar
+    background-color $navbar-background
+    height $navbar-height
+    line-height $navbar-height - 2px
+    box-sizing inherit
+    font-size $navbar-font-size
+    colorByBackground($navbar-background)
+    @extend .z-depth-1
+    .brand,
+    .menu,
+    .menu li
+        display inline-block
+        verticali-align middle
+    .brand
+        colorByBackground($navbar-background)
+        font-size $navbar-brand-font-size
+        padding 0 20px
+    .menu
+        @extend .col-xs
+        text-align right
+        height $navbar-height
+        a:not(.btn)
+            line-height $navbar-height
+            display inline-block
+            verticali-align middle
+            font- size 22px
+            height $navbar-height
+            padding 0 15px
+            colorByBackground($navbar-background)
+            i
+                font-size $navbar-icon-font-size
+        .btn
+            margin 0 10px
