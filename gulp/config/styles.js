@@ -1,11 +1,11 @@
 module.exports = {
   src: [
-    './assets/stylus/*.styl',
+    './src/stylus/*.styl',
   ],
   dest: './dist/styles/',
   watch: [
-    './assets/stylus/*.styl',
-    './assets/stylus/**/*.styl',
-    './assets/stylus/**/**/*.styl',
+    './src/stylus/*.styl',
+    './src/stylus/**/*.styl',
+    './src/stylus/**/**/*.styl',
   ],
 }

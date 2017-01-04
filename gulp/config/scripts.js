@@ -1,11 +1,11 @@
 import webpackConfig from './webpack.config.js';
 
 module.exports = {
-  src: './assets/scripts/app.js',
+  src: './src/scripts/app.js',
   dest: './dist/scripts/',
   watch: [
-    './assets/scripts/*.*',
-    './assets/scripts/**/*.*',
+    './src/scripts/*.*',
+    './src/scripts/**/*.*',
   ],
   webpack: {
     config: webpackConfig,

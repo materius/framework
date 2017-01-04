@@ -1,8 +1,8 @@
 module.exports = {
   src: [
-    './assets/images/*',
-    './assets/images/**/*',
-    './assets/images/**/**/*',
+    './src/images/*',
+    './src/images/**/*',
+    './src/images/**/**/*',
   ],
   dest: './dist/images/'
 }

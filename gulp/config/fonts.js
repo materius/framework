@@ -1,7 +1,7 @@
 module.exports = {
   src: [
     './node_modules/mdi/fonts/*.*',
-    './assets/fonts/*.*',
+    './src/fonts/*.*',
   ],
   dest: './dist/fonts/'
 }
