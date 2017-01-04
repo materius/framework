@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="logo" src="https://raw.github.com/materius/framework/master/assets/images/logo.png" width="128">
+  <img alt="logo" src="https://raw.githubusercontent.com/materius/framework/master/src/images/logo.png" width="128">
 </div>
 
 # Materius
