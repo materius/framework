@@ -4,7 +4,7 @@
 
 # Materius
 
-A front-end framework based on Google material design, make with sylus.
+[Materius](http://materius.github.io/) is a front-end framework based on Google material design, make with sylus.
 
 ## Install
 
