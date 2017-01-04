@@ -10,4 +10,3 @@ require('./bootstrap');
 $('.btn, .btn-large, .btn-small, .navbar .brand, .navbar .menu a, .input-box button').addClass('waves-effect');
 
 window.Waves = require('./components/waves');
-require('./components/prism');
