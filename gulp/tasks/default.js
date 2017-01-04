@@ -2,4 +2,4 @@
 
 import gulp from 'gulp';
 
-gulp.task('default', ['webpack', 'stylus', 'fonts', 'images', 'pug']);
+gulp.task('default', ['webpack', 'stylus', 'fonts']);

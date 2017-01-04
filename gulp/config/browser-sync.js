@@ -2,7 +2,7 @@ module.exports = {
     //proxy: 'http://localhost/',
     notify: false,
     server: {
-        baseDir: "dist",
+        baseDir: ".",
         directory: true
     }
 }
