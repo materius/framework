@@ -1,0 +1,24 @@
+{
+  "name": "materius",
+  "description": "A front-end framework based on Google material design, make with stylus",
+  "main": "",
+  "authors": [
+    "Juliano Bailão - julianobailao@gmail.com"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Material",
+    "Design",
+    "Front-end",
+    "Framework",
+    "Bootstrap",
+    "Materialize"
+  ],
+  "homepage": "http://materius.github.io",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
