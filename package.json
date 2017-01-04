@@ -1,8 +1,8 @@
 {
-  "name": "material-admin",
-  "version": "0.1.0",
-  "description": "Sass, Webpack, Gulp, Pugjs Boilerplate",
-  "main": "app.js",
+  "name": "materius",
+  "version": "0.0.2",
+  "description": "A front-end framework based on Google material design, make with stylus",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
