@@ -1,0 +1,101 @@
+@keyframes chameleon-progess
+    0%
+        background-color $blue['lighten-3']
+    25%
+        background-color $yellow['lighten-3']
+    50%
+        background-color $green['lighten-3']
+    75%
+        background-color $red['lighten-3']
+    100%
+        background-color $blue['lighten-3']
+
+.progress
+    position relative
+    height $progress-bar-height
+    display block
+    width 100%
+    background-color $progress-bar-background
+    border-radius $progress-bar-radius
+    background-clip padding-box
+    margin $progress-bar-margin
+    overflow hidden
+    &.chameleon
+        animation chameleon-progess 3840ms linear infinite
+        .determinate,
+        .indeterminate
+            @extend .chameleon-background
+    .determinate
+        position absolute
+        background-color inherit
+        top 0
+        bottom 0
+        background-color $progress-bar-active-background
+        transition width .3s linear
+    .indeterminate
+        background-color $progress-bar-active-background
+        &:before
+            content ''
+            position absolute
+            background-color inherit
+            top 0
+            left 0
+            bottom 0
+            will-change left, right
+            animation indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite
+        &:after
+            content ''
+            position absolute
+            background-color inherit
+            top 0
+            left 0
+            bottom 0
+            will-change left, right
+            animation indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite
+            animation-delay 1.15s
+    &.primary
+        background-color lightness($primary-color, lightness($primary-color) + 35)
+        .determinate,
+        .indeterminate
+            background-color $primary-color
+    &.secondary
+        background-color lightness($secondary-color, lightness($secondary-color) + 35)
+        .determinate,
+        .indeterminate
+            background-color $secondary-color
+    &.info
+        background-color lightness($info-color, lightness($info-color) + 35)
+        .determinate,
+        .indeterminate
+            background-color $info-color
+    &.warning
+        background-color lightness($warning-color, lightness($warning-color) + 35)
+        .determinate,
+        .indeterminate
+            background-color $warning-color
+    &.danger
+        background-color lightness($danger-color, lightness($danger-color) + 35)
+        .determinate,
+        .indeterminate
+            background-color $danger-color
+@keyframes indeterminate
+    0%
+        left -35%
+        right 100%
+    60%
+        left 100%
+        right -90%
+    100%
+        left 100%
+        right -90%
+
+@keyframes indeterminate-short
+    0%
+        left -200%
+        right 100%
+    60%
+        left 107%
+        right -8%
+    100%
+        left 107%
+        right -8%

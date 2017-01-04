@@ -47,6 +47,13 @@ $h4-font-size = 2.28rem;
 $h5-font-size = 1.64rem;
 $h6-font-size = 1rem;
 
+// progress-bar
+$progress-bar-height = 4px
+$progress-bar-margin = 0.5rem 0 1rem 0
+$progress-bar-radius = 2px
+$progress-bar-active-background = $primary-color
+$progress-bar-background = lightness($progress-bar-active-background, lightness($progress-bar-active-background) + 35)
+
 colorByBackground($background)
     if lightness($background) <= 60deg
         color rgba(255, 255, 255, .9)

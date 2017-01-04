@@ -1,0 +1,29 @@
+@keyframes chameleon-background
+    0%
+        background-color $blue['base']
+    25%
+        background-color $yellow['base']
+    50%
+        background-color $green['base']
+    75%
+        background-color $red['base']
+    100%
+        background-color $blue['base']
+
+.chameleon-background
+    animation chameleon-background 3840ms linear infinite
+
+@keyframes chameleon-color
+    0%
+        color $blue['base']
+    25%
+        color $yellow['base']
+    50%
+        color $green['base']
+    75%
+        color $red['base']
+    100%
+        color $blue['base']
+
+.chameleon-color
+    animation chameleon-color 3840ms linear infinite

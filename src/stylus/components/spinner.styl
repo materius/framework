@@ -1,0 +1,45 @@
+$seconds = 260
+
+@keyframes spin
+    to
+        transform: rotate(1440deg)
+
+@keyframes shape-shift-before
+    to
+        -webkit-clip-path inset(90% 0 0 0)
+
+.spinner
+    width 56px
+    height 0
+    color $primary-color
+    padding-bottom 56px
+    border-radius 50%
+    position relative
+    overflow hidden
+    display inline-block
+    transform rotate(0deg)
+    will-change transform
+    animation spin ($seconds*16)ms linear infinite
+    background-color transparent !important
+    &.chameleon
+        animation spin ($seconds*16)ms linear infinite, chameleon-color ($seconds*16)ms linear infinite
+    &.secondary
+        color $secondary-color
+    &.info
+        color $info-color
+    &.warning
+        color $warning-color
+    &.danger
+        color $danger-color
+    &::before
+        content ' '
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        box-shadow inset 0 0 0 3px
+        -webkit-clip-path inset(4px 0 0 0)
+        border-radius 50%
+        animation shape-shift-before ($seconds*4)ms cubic-bezier(.4, 0, .2, 1) alternate infinite
+

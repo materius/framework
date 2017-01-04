@@ -1,0 +1,220 @@
+.material-field
+    position relative
+    width 100%
+    margin-bottom 40px
+    font-size 0
+    input,
+    textarea,
+    select
+        background transparent
+        resize none
+        font-size 15px
+        font-family 'Roboto', sans-serif
+        diplsy block
+        width 100%
+        border none
+        border-bottom solid 1px #ccc
+        outline none !important
+        height 25px
+        padding 5px 0
+        font-size 16px
+        & ~ label
+            font-size 15px
+            cursor text !important
+            position absolute
+            left 0
+            top 10px
+            transition top .25s, font-size .25s
+        & ~ .tracer
+            content ''
+            position absolute
+            left 50%
+            bottom 0
+            width 0
+            height 1px
+            background $secondary-color
+            transform translateX(-50%)
+            transition width .25s, height .25s
+        &:focus ~ label,
+        &.active ~ label
+            height 100%
+            top -12px
+            font-size .8rem
+            transition top .25s, font-size .25s, height .25s
+        &:focus ~ .tracer
+            width 100%
+            height 2px
+            transition width .25s, height .25s
+    textarea
+        min-height 75px
+input[type="radio"].material-style
+    display none
+    & + label
+        cursor pointer !important
+        position relative
+        display inline-block
+        margin 0.36em 1.8em
+        font-size 1.2em
+        line-height 1.2em
+        color #666
+        white-space nowrap
+        transition all 0.4s ease-in-out
+        &::after
+            content " "
+            display inline-block
+            width 1.2em
+            height 1.2em
+            border-radius 50%
+            position absolute
+            top 0
+            left -1.8em
+            box-shadow 0 0 0 0 transparent inset,
+                0 0 0 0 transparent inset,
+                0 0 0 0.075em #bbb inset,
+                0 0 0 0 transparent
+            transition all 0.4s ease-in-out
+        &:hover
+            color $primary-color
+            &::after
+                box-shadow 0 0 0 0 transparent inset,
+                    0 0 0 0 transparent inset,
+                    0 0 0 0.1125em $primary-color inset,
+                    0 0 0 0 $primary-color
+    &:checked
+        & + label:after
+            box-shadow 0 0 0 0.075em #bbb inset,
+                0 0 0 0.31578947em #F2F9FF inset,
+                0 0 0 1.2em $primary-color inset,
+                0 0 0 1.2em transparent
+            &:hover::after
+              box-shadow 0 0 0 0.075em $primary-color inset,
+                0 0 0 0.31578947em #F2F9FF inset,
+                0 0 0 1.2em $primary-color inset,
+                0 0 0 1.2em transparent
+input[type="checkbox"].material-style
+    display none
+    & + label
+        cursor pointer !important
+        position relative
+        display inline-block
+        margin 0.36em 1.8em
+        font-size 1.2em
+        line-height 1.2em
+        color #666
+        white-space nowrap
+        transition all 0.4s ease-in-out
+        &::after
+            content ''
+            width 1.2em
+            height 1.2em
+            position absolute
+            top 0
+            left -1.8em
+            box-shadow 0 0 0 0 transparent inset,
+                0 0 0 0 transparent inset,
+                0 0 0 0.075em transparent inset,
+                0 0 0 0 transparent
+            transition all 0.4s ease-in-out
+        &::before
+            content ''
+            width 1.2em
+            height 1.2em
+            position absolute
+            top 0
+            left -1.8em
+            border solid 1px #bbb
+            box-sizing border-box
+            transition all 0.4s ease-in-out
+        &:hover
+            color $primary-color
+            &::after
+                box-shadow 0 0 0 0 transparent inset,
+                    0 0 0 0 transparent inset,
+                    0 0 0 0.1125em $primary-color inset,
+                    0 0 0 0 $primary-color
+    &:checked
+        & + label
+            &::after
+                box-shadow 0 0 0 0.075em transparent inset,
+                    0 0 0 0.31578947em transparent inset,
+                    0 0 0 1.2em transparent inset,
+                    0 0 0 1.2em transparent
+            &::before
+                height .5em
+                transform rotate(-45deg)
+                border-color $success-color
+                border-width 2px
+                border-top-style none
+                border-right-style none
+                transition all 0.4s ease-in-out
+
+switchColor($color)
+    input ~ label::after
+        box-shadow 0 2px 4px 0 rgba(72, 72, 72, 0.5),
+            0 0 0 0 $color
+    input:checked ~ label
+        background lightness($color, lightness($color) - 15%)
+        &::after
+            background $color
+
+.switch
+    display inline-block
+    margin 20px 0
+    user-select none
+    background transparent !important
+    input:not(:checked),
+    input:checked
+        opacity 0
+        position absolute
+        margin 0
+        z-index -1
+        width 0
+        height 0
+        overflow hidden
+        left 0
+        pointer-events none
+        & ~ label
+            position relative
+            display block
+            width 35px
+            height 14px
+            background-color #757575
+            color transparent
+            border-radius 100px
+            cursor pointer
+            transition all .2s ease-in
+            &::after
+                content ''
+                position absolute
+                top -3px
+                left -1px
+                display block
+                width 20px
+                height 20px
+                border-radius 100px
+                background #fff
+                box-shadow 0 2px 4px 0 rgba(72, 72, 72, 0.5),
+                    0 0 0 0 $primary-color
+                transition all .2s ease-in, box-shadow 0.4s ease-in-out
+        &:checked ~ label
+            background lightness($primary-color, lightness($primary-color) - 15%)
+            &::after
+                transform translateX(16px)
+                background $primary-color
+                box-shadow 0 2px 4px 0 rgba(72, 72, 72, 0.5),
+                    0 0 0 1.2em transparent
+                transition all .2s ease-in, box-shadow 0.4s ease-in-out
+        &:disabled ~ label
+            background #F0F0F0
+            pointer-events none
+            &::after
+                background #D1D1D1
+                box-shadow 0 1px 2px 0 rgba(72, 72, 72, 0.5)
+    &.secondary
+        switchColor($secondary-color)
+    &.info
+        switchColor($info-color)
+    &.warning
+        switchColor($warning-color)
+    &.danger
+        switchColor($danger-color)

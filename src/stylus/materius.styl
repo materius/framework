@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-@import './components/reset'
+@import './components/normalize'
 @import './components/colors'
 @import './components/_config'
 @import './components/grid'
@@ -7,10 +7,17 @@
 @import './components/typography'
 @import './components/waves'
 @import './components/shadow'
+@import './components/chameleon'
 @import './components/buttons'
 @import './components/input-box'
 @import './components/navbar'
 @import './components/footer'
+@import './components/card'
+@import './components/list'
+@import './components/pagination'
+@import './components/progress-bar'
+@import './components/spinner'
+@import './components/form'
 
 p
     display block
@@ -24,14 +31,19 @@ p
     text-align right
 
 .wrapper-5
+    display inline-block
     padding 5px
-.wrapper-5
+.wrapper-10
+    display inline-block
     padding 10px
 .wrapper
+    display inline-block
     padding 20px
 .wrapper-40
+    display inline-block
     padding 40px
 .wrapper-80
+    display inline-block
     padding 80px
 .section
     margin 40px 0
@@ -40,6 +52,13 @@ p
     border solid 1px #ccc
 .bordered-2
     border solid 2px #ccc
+
+.divider
+    width 100%
+    display block
+    height 1px
+    overflow hidden
+    background #eee
 
 // colors
 .primary

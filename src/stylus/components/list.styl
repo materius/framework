@@ -1,0 +1,19 @@
+.list
+    displa block
+    margin 0
+    padding 0
+    list-style none
+    @extend .card
+    li,
+    & > a
+        display block
+        padding 10px
+        border-bottom solid 1px #eee
+        list-style none
+    & > a
+        color $primary-color
+        &:not(.active):hover
+            background-color rgba(0, 0, 0, .05)
+    .active
+        background-color $primary-color
+        colorByBackground($primary-color)

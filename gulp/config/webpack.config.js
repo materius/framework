@@ -2,7 +2,7 @@ import webpack from 'webpack';
 
 module.exports = {
     output: {
-        filename: 'app.js',
+        filename: 'materius.js',
     },
     resolve: {
         alias: {
