@@ -36,9 +36,14 @@ window.Waves = require('./components/waves');
 const autosize = require('./components/autoresize');
 autosize($('textarea'));
 
-$('.menu-liquid > li, .menu-liquid > li > a').click(function(e) {
+$('.menu-liquid > li').click(function(e) {
     e.preventDefault();
 
-    $(this).parent().find('li').removeClass('active');
-    $(this).addClass('active');
+    $(this).parent().find('li').not(this).removeClass('active');
+
+    if (! $(this).hasClass('active')) {
+        $(this).addClass('active');
+    } else {
+        $(this).removeClass('active');
+    }
 });

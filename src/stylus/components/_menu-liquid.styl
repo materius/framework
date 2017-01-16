@@ -1,6 +1,7 @@
 .menu-liquid
     background $menu-liquid-background
     text-align left
+    colorByBackground($menu-liquid-background)
 
     &,
     ul,
@@ -15,6 +16,13 @@
         cursor pointer
         position relative
         padding 10px
+
+        &:after
+            position absolute
+            right 10px
+            top 17px
+            transition transform .26s ease
+            @extend .mdi, .mdi-chevron-right:before
 
         &:hover
             background rgba(255, 255, 255, .1)
@@ -67,6 +75,11 @@
 
         &.active
             background rgba(255, 255, 255, .2)
+
+            &:after
+                transform rotate(90deg)
+                transition transform .26s ease
+
             & > i
                 vertical-align top
                 height calc(100% - 20px)
