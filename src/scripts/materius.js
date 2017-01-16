@@ -35,3 +35,10 @@ window.Waves = require('./components/waves');
 // autoresize textareas
 const autosize = require('./components/autoresize');
 autosize($('textarea'));
+
+$('.menu-fluid li').click(function(e) {
+    e.preventDefault();
+
+    $(this).parent().find('li').removeClass('active');
+    $(this).addClass('active');
+});

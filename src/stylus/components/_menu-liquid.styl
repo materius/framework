@@ -1,0 +1,80 @@
+.menu-liquid
+    background #37474f
+    text-align left
+
+    &,
+    ul,
+    li
+        display block
+        list-style none
+        padding 0
+        margin 0
+        box-sizing border-box
+
+    & > li
+        cursor pointer
+        position relative
+        padding 10px
+
+        &:hover
+            background rgba(255, 255, 255, .1)
+
+        & > i,
+        & > .menu-wrapper
+            display inline-block
+            vertical-align middle
+
+        & > .menu-wrapper
+            width 100%
+            padding-left 42px
+            box-sizing border-box
+
+            & > a
+                colorByBackground(#37474f)
+                display block
+                padding 5px 10px
+
+            .submenu
+                overflow hidden
+                max-height 0
+                transition max-height 0.26s ease
+
+                & > li
+                    display block
+                    padding 10px 10px 10px 20px
+
+                    &:hover
+                        text-decoration underline
+
+                    & > a
+                        display block
+                        colorByBackground(#37474f)
+
+        & > i
+            position absolute
+            font-size 18px
+            width 32px
+            height 32px
+            border-radius 20px
+            background $primary-color
+            colorByBackground($primary-color)
+            transition height .26s ease
+
+            &:before
+                position absolute
+                left 6px
+                top 6px
+
+        &.active
+            background rgba(255, 255, 255, .2)
+            & > i
+                vertical-align top
+                height calc(100% - 20px)
+                position absolute
+                top 10px
+                transition height .26s ease
+
+            & > .menu-wrapper
+                .submenu
+                    max-height 1000px
+                    transition max-height 0.26s ease
