@@ -1,0 +1,50 @@
+.modal
+    width 40%
+    opacity 0
+    visibility hidden
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%) scale(0)
+    background #fff
+    z-index 999
+    transition all .26s ease-out
+    border-radius 3px
+    will-change width, max-height, visibility, opacity;
+    @extend .z-depth-2
+
+    &.active
+        opacity 1
+        visibility visible
+        transition all .26s ease-in
+        transform translate(-50%, -50%) scale(1)
+
+.modal-medium
+    @extend .modal
+    width 60%
+
+.modal-large
+    @extend .modal
+    width 80%
+
+.bottom-sheet
+    position fixed
+    right 0
+    left 0
+    bottom 0
+    top 50%
+    background #fff
+    z-index 999
+    overflow auto
+    visibility hidden
+    transform scaleY(0)
+    transform-origin bottom
+    will-change transform, visibility;
+    transition transform .26s ease-out, visibility .3s ease
+    @extend .z-depth-2
+
+    &.active
+        visibility visible
+        transform scaleY(1)
+        transition transform .26s ease-in
+

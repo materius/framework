@@ -36,14 +36,38 @@ window.Waves = require('./components/waves');
 const autosize = require('./components/autoresize');
 autosize($('textarea'));
 
-$('.menu-liquid > li').click(function(e) {
-    e.preventDefault();
+$(document).ready(function() {
+    $('.menu-liquid > li').click(function(e) {
+        e.preventDefault();
 
-    $(this).parent().find('li').not(this).removeClass('active');
+        $(this).parent().find('li').not(this).removeClass('active');
 
-    if (! $(this).hasClass('active')) {
-        $(this).addClass('active');
-    } else {
+        if (! $(this).hasClass('active')) {
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+    });
+
+    var overlay = $('<div class="materius-overlay"></div>');
+    overlay.click(function () {
+        $('.trigged').removeClass('active trigged');
         $(this).removeClass('active');
-    }
+    });
+    $('body').append(overlay);
+
+    $('.modal-trigger').each(function () {
+        var modal = $('#'+$(this).attr('data-link'));
+
+        $(this).click(function (e) {
+            e.preventDefault();
+            console.log(modal);
+            modal.addClass('active trigged');
+            overlay.addClass('active');
+        });
+
+        modal.find('.modal-close').click(function (e) {
+            overlay.click();
+        })
+    });
 });
