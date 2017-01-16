@@ -1,0 +1,54 @@
+breadcrumbsColor($color = $primary-color)
+    background $color
+    border none
+    @extend .z-depth-1
+
+    a
+        colorByBackground($color)
+
+.breadcrumbs
+    padding 10px
+    border-bottom solid 1px #eee
+
+    a
+        display inline-block
+        vertical-align middle
+        color #666
+
+        &:after
+            @extend .mdi, .mdi-chevron-right:before
+            display inline-block
+            vertical-align middle
+
+        &:last-child
+            font-weight bold
+
+            &:after
+                display none
+
+        &:hover
+            text-decoration underline
+
+    &.primary
+        breadcrumbsColor($primary-color)
+
+    &.secondary
+        breadcrumbsColor($secondary-color)
+
+    &.info
+        breadcrumbsColor($info-color)
+
+    &.warning
+        breadcrumbsColor($warning-color)
+
+    &.danger
+        breadcrumbsColor($danger-color)
+
+    &.success
+        breadcrumbsColor($success-color)
+
+    &.chameleon
+        @extend .chameleon-background
+
+        a
+            color #fff

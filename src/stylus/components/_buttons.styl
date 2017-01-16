@@ -1,9 +1,10 @@
 button-color($color)
     background-color $color
     colorByBackground($color)
-    &:hover
-        &:not([disabled])
-            background-color lightness($color, lightness($color) + 10)
+
+    &:not([disabled]):hover
+        background-color lightness($color, lightness($color) + 10)
+
 .btn
     display inline-block
     vertical-align middle
@@ -19,48 +20,63 @@ button-color($color)
     outline none !important
     transition background-color .25s, box-shadow .25s
     @extend .z-depth-1
-    &:hover
-        &:not([disabled])
-            transition background-color .25s, box-shadow .25s
-            box-shadow 0 8px 17px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15)
+
+    &:not([disabled]):hover
+        transition background-color .25s, box-shadow .25s
+        box-shadow 0 8px 17px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15)
+
     &.primary
         button-color($button-background)
+
     &.secondary
         button-color($secondary-color)
+
     &.success
         button-color($success-color)
+
     &.info
         button-color($info-color)
+
     &.warning
         button-color($warning-color)
+
     &.danger
         button-color($danger-color)
+
     &.link
         color $primary-color
         box-shadow none !important
         background transparent
+
         &:hover
             background transparent
+
             &:not([disabled])
                 text-decoration underline
+
     &.chameleon
         color #fff
         @extend .chameleon-background
+
     &.disabled,
     &:disabled,
     &[disabled]
+
         &,
         &:hover
             cursor not-allowed !important
             opacity 0.25
+
 .btn-flat
     @extend .btn
     box-shadow none !important
+
 .btn-large
     @extend .btn
     font-size $button-font-size + .5rem
     height $button-height + 15px
     line-height $button-height + 15px
+
 .btn-small
     @extend .btn
     font-size $button-font-size - .2rem

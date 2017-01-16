@@ -1,0 +1,35 @@
+table
+    width 100%
+
+    thead
+        tr
+            border-bottom solid 1px #eee
+
+            td,
+            th
+                padding 15px 5px
+                font-weight bold
+                text-align left
+                vertical-align middle
+    tbody
+        tr
+            td
+                padding 15px 5px
+                font-weight normal
+                text-align left
+                vertical-align middle
+
+    &.table-bordered
+        tbody
+            tr
+                border-bottom solid 1px #eee
+
+    &.table-striped
+        tbody
+            tr:nth-child(odd)
+                background $striped-color
+
+    &.table-highlight
+        tbody
+            tr:hover
+                background $highlight-color

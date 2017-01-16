@@ -6,20 +6,24 @@
     font-size $navbar-font-size
     colorByBackground($navbar-background)
     @extend .z-depth-1
+
     .brand,
     .menu,
     .menu li
         margin 0
         display inline-block
         vertical-align middle
+
     .brand
         colorByBackground($navbar-background)
         font-size $navbar-brand-font-size
         padding 0 20px
+
     .menu
         @extend .col-xs
         text-align right
         height $navbar-height
+
         a:not(.btn)
             line-height $navbar-height
             display inline-block
@@ -28,7 +32,9 @@
             height $navbar-height
             padding 0 15px
             colorByBackground($navbar-background)
+
             i
                 font-size $navbar-icon-font-size
+
         .btn
             margin 0 10px

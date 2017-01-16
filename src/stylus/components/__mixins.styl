@@ -1,0 +1,14 @@
+// text color by background color
+colorByBackground($background = $primary-color)
+    if lightness($background) <= 60deg
+        color rgba(255, 255, 255, .9)
+    else
+        color rgba(0, 0, 0, .6)
+
+// lighten a color
+lighten($color = $primary-color, $lightLevel = 10)
+    return lightness($color, lightness($color) + $lightLevel)
+
+// darken a color
+darken($color = $primary-color, $darkenLevel = 10)
+    return lightness($color, lightness($color) - $darkenLevel)

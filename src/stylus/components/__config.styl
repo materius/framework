@@ -1,4 +1,4 @@
-//colors
+// colors
 $primary-color = $light-blue['base']
 $secondary-color = $pink['base']
 $success-color = $green['base']
@@ -29,7 +29,7 @@ $input-box-padding = 0 5px 0 0
 $input-box-margin = 0 10px 0 0
 
 // footer
-$footer-background = $blue-grey['darken-3']
+$footer-background = $blue-grey['dark-3']
 
 // media Query ranges
 $small-screen-up = 601px;
@@ -39,7 +39,7 @@ $small-screen = 600px;
 $medium-screen = 992px;
 $large-screen = 1200px;
 
-// Header Styles
+// headers
 $h1-font-size = 4.2rem;
 $h2-font-size = 3.56rem;
 $h3-font-size = 2.92rem;
@@ -52,10 +52,8 @@ $progress-bar-height = 4px
 $progress-bar-margin = 0.5rem 0 1rem 0
 $progress-bar-radius = 2px
 $progress-bar-active-background = $primary-color
-$progress-bar-background = lightness($progress-bar-active-background, lightness($progress-bar-active-background) + 35)
+$progress-bar-background = lighten($progress-bar-active-background, 35)
 
-colorByBackground($background)
-    if lightness($background) <= 60deg
-        color rgba(255, 255, 255, .9)
-    else
-        color rgba(0, 0, 0, .6)
+// table
+$striped-color = $grey['light-5'];
+$highlight-color = $grey['light-3'];

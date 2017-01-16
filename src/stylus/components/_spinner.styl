@@ -21,16 +21,25 @@ $seconds = 260
     will-change transform
     animation spin ($seconds*16)ms linear infinite
     background-color transparent !important
+
     &.chameleon
         animation spin ($seconds*16)ms linear infinite, chameleon-color ($seconds*16)ms linear infinite
+
     &.secondary
         color $secondary-color
+
     &.info
         color $info-color
+
     &.warning
         color $warning-color
+
     &.danger
         color $danger-color
+
+    &.success
+        color $success-color
+
     &::before
         content ' '
         position absolute
